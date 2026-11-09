@@ -103,4 +103,4 @@ covers the conventions and doubles as the guide for AI agents working on this re
 
 ## License
 
-[MIT](LICENSE) © 2026 The Software Society
+[Apache License 2.0](LICENSE) © 2026 The Software Society. See [NOTICE](NOTICE).
