@@ -1,0 +1,150 @@
+{
+  "uuid": "3bd4223e-a6a6-57d5-946e-b4b49319b216",
+  "slug": "gutter-cleaning-springfield",
+  "title": "Gutter Cleaning in Springfield",
+  "status": "published",
+  "metadata": {
+    "basic": {
+      "title": "Gutter Cleaning in Springfield | Brightline Gutter Co.",
+      "description": "Gutter cleaning in Springfield for one- and two-story homes, with a downspout flow test and photos of every job.",
+      "canonical": "",
+      "keywords": "gutter cleaning springfield",
+      "robots": {
+        "index": true,
+        "follow": true,
+        "noarchive": false,
+        "nosnippet": false
+      }
+    },
+    "openGraph": {
+      "title": "",
+      "description": "",
+      "image": "",
+      "type": "website",
+      "url": "",
+      "siteName": ""
+    },
+    "twitter": {
+      "card": "summary_large_image",
+      "title": "",
+      "description": "",
+      "image": ""
+    },
+    "structuredData": [
+      {
+        "id": "service",
+        "type": "Service",
+        "data": {
+          "serviceType": "Gutter cleaning",
+          "areaServed": "Springfield",
+          "provider": {
+            "@type": "LocalBusiness",
+            "name": "Brightline Gutter Co."
+          }
+        }
+      }
+    ],
+    "customMeta": []
+  },
+  "blocks": [
+    {
+      "uuid": "2e66ca19-8602-59f8-997c-0d978c866abf",
+      "name": "Single Column",
+      "order": 0,
+      "settings": {
+        "type": "Contained",
+        "contentSize": 900,
+        "sectionSize": 1200,
+        "contentPosition": "center left",
+        "buttonPosition": "Left",
+        "topBottomPadding": true,
+        "leftRightPadding": false,
+        "minHeight": 0,
+        "backgroundColor": "None"
+      },
+      "content": {
+        "content": "<h1>Gutter Cleaning in Springfield</h1><p>Brightline Gutter Co. offers gutter cleaning in Springfield for one- and two-story homes, with most jobs booked within a week. Every cleaning includes a downspout flow test and photos of the finished gutters.</p>",
+        "buttons": [
+          {
+            "text": "Call for a quote",
+            "link": "tel:5550100187",
+            "open_new_tab": false,
+            "styleType": "solid"
+          }
+        ]
+      },
+      "media": null
+    },
+    {
+      "uuid": "d2b22287-89b6-5122-a35f-0c7feefb5e1b",
+      "name": "Steps",
+      "order": 1,
+      "settings": {
+        "type": "Contained",
+        "contentSize": 900,
+        "sectionSize": 1200,
+        "contentPosition": "center center",
+        "buttonPosition": "Left",
+        "topBottomPadding": true,
+        "leftRightPadding": false,
+        "minHeight": 0,
+        "backgroundColor": "None"
+      },
+      "content": {
+        "contentAbove": "<h2>What a gutter cleaning includes</h2>",
+        "buttons": [],
+        "items": [
+          {
+            "title": "Clear the gutters by hand",
+            "content": "<p>Leaves and grit are scooped out by hand, never blown onto your roof or lawn.</p>",
+            "media": null
+          },
+          {
+            "title": "Flush every downspout",
+            "content": "<p>Each downspout is flushed and tested so you know water is reaching the ground.</p>",
+            "media": null
+          },
+          {
+            "title": "Check seams and hangers",
+            "content": "<p>Loose hangers and leaking seams are noted, with a quote if anything needs repair.</p>",
+            "media": null
+          }
+        ]
+      },
+      "media": null
+    },
+    {
+      "uuid": "81d67d4b-c52a-5a98-b7c2-7b82da1617d4",
+      "name": "FAQs",
+      "order": 2,
+      "settings": {
+        "type": "Contained",
+        "contentSize": 900,
+        "sectionSize": 1200,
+        "contentPosition": "center center",
+        "buttonPosition": "Left",
+        "topBottomPadding": false,
+        "leftRightPadding": false,
+        "minHeight": 0,
+        "backgroundColor": "None",
+        "layout": "Default"
+      },
+      "content": {
+        "contentAbove": "<h2>Gutter cleaning questions</h2>",
+        "items": [
+          {
+            "question": "How often should gutters be cleaned in Springfield?",
+            "answer": "<p>Twice a year for most homes: once in late spring and once after the leaves drop in the fall.</p>"
+          },
+          {
+            "question": "Do you clean gutters with guards installed?",
+            "answer": "<p>Yes. Guards keep most debris out, but they still need a rinse and check every year or two.</p>"
+          }
+        ]
+      },
+      "media": null
+    }
+  ],
+  "created_at": "2026-10-01T15:00:00.000Z",
+  "updated_at": "2026-10-01T15:00:00.000Z"
+}

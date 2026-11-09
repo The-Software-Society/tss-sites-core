@@ -1,0 +1,133 @@
+{
+  "uuid": "41782dff-39c1-5301-a9ad-8693cc399a4a",
+  "slug": "menu",
+  "title": "Menu",
+  "status": "published",
+  "metadata": {
+    "basic": {
+      "title": "Bread and Pastry Menu | Juniper Street Bakery",
+      "description": "Today's sourdough loaves, laminated pastries and cakes, with prices. Everything is baked on site each morning.",
+      "canonical": "",
+      "keywords": "bakery menu",
+      "robots": {
+        "index": true,
+        "follow": true,
+        "noarchive": false,
+        "nosnippet": false
+      }
+    },
+    "openGraph": {
+      "title": "",
+      "description": "",
+      "image": "",
+      "type": "website",
+      "url": "",
+      "siteName": ""
+    },
+    "twitter": {
+      "card": "summary_large_image",
+      "title": "",
+      "description": "",
+      "image": ""
+    },
+    "structuredData": [],
+    "customMeta": []
+  },
+  "blocks": [
+    {
+      "uuid": "8d4facf4-7e1a-58ee-826f-a61346318171",
+      "name": "Single Column",
+      "order": 0,
+      "settings": {
+        "type": "Contained",
+        "contentSize": 900,
+        "sectionSize": 1200,
+        "contentPosition": "center center",
+        "buttonPosition": "Left",
+        "topBottomPadding": true,
+        "leftRightPadding": false,
+        "minHeight": 0,
+        "backgroundColor": "None"
+      },
+      "content": {
+        "content": "<h1>Menu</h1><p>Everything is baked here each morning. Prices are per item.</p>",
+        "buttons": []
+      },
+      "media": null
+    },
+    {
+      "uuid": "ed726b94-a140-5d9e-b161-823f8f9a0275",
+      "name": "Grid",
+      "order": 1,
+      "settings": {
+        "type": "Contained",
+        "contentSize": 1100,
+        "sectionSize": 1200,
+        "contentPosition": "center left",
+        "buttonPosition": "Left",
+        "topBottomPadding": false,
+        "leftRightPadding": false,
+        "minHeight": 0,
+        "backgroundColor": "None",
+        "layout": "Media Above",
+        "gridItemsPerRow": 2
+      },
+      "content": {
+        "contentAbove": "<h2>Bread</h2>",
+        "buttonsAbove": [],
+        "buttons": [],
+        "items": [
+          {
+            "content": "<h3>Country sourdough \u00b7 $9</h3><p>Wheat and a little whole rye. Our everyday loaf.</p>",
+            "media": "0ca422ea-42aa-5c10-907a-5c4b97497c5b"
+          },
+          {
+            "content": "<h3>Seeded rye \u00b7 $10</h3><p>Dense, dark and packed with sunflower, flax and sesame.</p>",
+            "media": "dd9b5c6c-bb1b-504d-801e-084cc7912cb7"
+          }
+        ]
+      },
+      "media": null
+    },
+    {
+      "uuid": "25d55776-782f-59e8-9cd8-428ff9158855",
+      "name": "Grid",
+      "order": 2,
+      "settings": {
+        "type": "Full Width",
+        "contentSize": null,
+        "sectionSize": null,
+        "contentPosition": "center left",
+        "buttonPosition": "Left",
+        "topBottomPadding": true,
+        "leftRightPadding": true,
+        "minHeight": 0,
+        "backgroundColor": "Secondary",
+        "layout": "Media Above",
+        "gridItemsPerRow": 3
+      },
+      "content": {
+        "contentAbove": "<h2>Pastry</h2>",
+        "buttonsAbove": [],
+        "buttons": [],
+        "items": [
+          {
+            "content": "<h3>Butter croissant \u00b7 $4.50</h3><p>Three days from dough to oven.</p>",
+            "media": null
+          },
+          {
+            "content": "<h3>Cardamom bun \u00b7 $5</h3><p>Swedish-style, with fresh-ground cardamom.</p>",
+            "media": null
+          },
+          {
+            "content": "<h3>Fruit danish \u00b7 $5.50</h3><p>Whatever is in season this week.</p>",
+            "media": null
+          }
+        ]
+      },
+      "media": null
+    }
+  ],
+  "created_at": "2026-10-01T15:00:00.000Z",
+  "updated_at": "2026-10-01T15:00:00.000Z"
+}

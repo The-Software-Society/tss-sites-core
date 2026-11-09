@@ -1,0 +1,12 @@
+node_modules/
+.next/
+out/
+export/
+*.tsbuildinfo
+next-env.d.ts
+.DS_Store
+.env*
+!.env.example
+coverage/
+# Local site data written by the editor stays out of git unless you add it
+data/local/

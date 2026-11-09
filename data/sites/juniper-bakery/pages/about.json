@@ -1,0 +1,121 @@
+{
+  "uuid": "5ed2ba67-fc43-5cd8-a5ed-2ca35d06d5d2",
+  "slug": "about",
+  "title": "About",
+  "status": "published",
+  "metadata": {
+    "basic": {
+      "title": "About the Bakery | Juniper Street Bakery",
+      "description": "How Juniper Street Bakery makes its bread: a decade-old starter, a 36-hour cold ferment and regional flour.",
+      "canonical": "",
+      "keywords": "about juniper street bakery",
+      "robots": {
+        "index": true,
+        "follow": true,
+        "noarchive": false,
+        "nosnippet": false
+      }
+    },
+    "openGraph": {
+      "title": "",
+      "description": "",
+      "image": "",
+      "type": "website",
+      "url": "",
+      "siteName": ""
+    },
+    "twitter": {
+      "card": "summary_large_image",
+      "title": "",
+      "description": "",
+      "image": ""
+    },
+    "structuredData": [],
+    "customMeta": []
+  },
+  "blocks": [
+    {
+      "uuid": "7e70276c-a066-53be-bd51-58f04ecce1ad",
+      "name": "Two Column",
+      "order": 0,
+      "settings": {
+        "type": "Contained",
+        "contentSize": 1100,
+        "sectionSize": 1200,
+        "contentPosition": "center center",
+        "buttonPosition": "Left",
+        "topBottomPadding": true,
+        "leftRightPadding": false,
+        "minHeight": 0,
+        "backgroundColor": "None"
+      },
+      "content": {
+        "columns": [
+          {
+            "type": "text",
+            "order": 0,
+            "content": "<h1>About the bakery</h1><p>Juniper Street Bakery opened in 2014 as one oven and a folding table. We still bake everything on site, and we still sell out most days.</p><p>The menu is short on purpose. We would rather bake six things well than twenty things fast.</p>",
+            "buttons": [
+              {
+                "text": "Visit us",
+                "link": "/visit",
+                "open_new_tab": false,
+                "styleType": "solid"
+              }
+            ]
+          },
+          {
+            "type": "media",
+            "order": 1
+          }
+        ]
+      },
+      "media": "b4e9100a-18fc-5778-a0b9-16294cff5837"
+    },
+    {
+      "uuid": "3e940eb5-213b-5b70-9bb8-959c1f59c6d3",
+      "name": "Steps",
+      "order": 1,
+      "settings": {
+        "type": "Contained",
+        "contentSize": 900,
+        "sectionSize": 1200,
+        "contentPosition": "center center",
+        "buttonPosition": "Left",
+        "topBottomPadding": true,
+        "leftRightPadding": false,
+        "minHeight": 0,
+        "backgroundColor": "None"
+      },
+      "content": {
+        "contentAbove": "<h2>How a loaf is made</h2>",
+        "buttons": [],
+        "items": [
+          {
+            "title": "Feed the starter",
+            "content": "<p>The starter is fed twice a day so it is at its peak when the dough is mixed.</p>",
+            "media": null
+          },
+          {
+            "title": "Mix and fold",
+            "content": "<p>Flour, water, salt and starter are mixed, then folded by hand over three hours.</p>",
+            "media": null
+          },
+          {
+            "title": "Cold ferment",
+            "content": "<p>Shaped loaves rest in the cooler for a day and a half, which builds flavor.</p>",
+            "media": null
+          },
+          {
+            "title": "Bake hot",
+            "content": "<p>Each loaf is baked in a steam-injected deck oven until the crust is deep brown.</p>",
+            "media": null
+          }
+        ]
+      },
+      "media": null
+    }
+  ],
+  "created_at": "2026-10-01T15:00:00.000Z",
+  "updated_at": "2026-10-01T15:00:00.000Z"
+}

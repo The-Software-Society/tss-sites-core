@@ -1,0 +1,26 @@
+[
+  {
+    "uuid": "1f1cbf6a-ca8d-54cc-b9b6-18f1ee16296d",
+    "name": "clean-gutter-on-two-story-home",
+    "alt": "A clean gutter line on a two-story home",
+    "url": "/media/brightline-gutters/clean-gutter-on-two-story-home.svg",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "uuid": "57fe5187-b7f8-5f27-85f7-41ce69b85a4a",
+    "name": "gutter-guard-installation",
+    "alt": "Gutter guards being fitted to a seamless gutter",
+    "url": "/media/brightline-gutters/gutter-guard-installation.svg",
+    "width": 1200,
+    "height": 900
+  },
+  {
+    "uuid": "319ec772-fc69-5e3c-957f-d3cc72dc0c7b",
+    "name": "downspout-flow-test",
+    "alt": "Water running clear from a downspout during a flow test",
+    "url": "/media/brightline-gutters/downspout-flow-test.svg",
+    "width": 900,
+    "height": 1200
+  }
+]

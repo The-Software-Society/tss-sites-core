@@ -1,0 +1,121 @@
+{
+  "uuid": "a33fe09a-a45b-558a-bbb0-9b64757e827a",
+  "id": "juniper-bakery",
+  "domain": "juniper-bakery.example",
+  "company": "Juniper Street Bakery",
+  "description": "A neighborhood sourdough bakery baking naturally leavened bread, pastries and seasonal cakes every morning.",
+  "phone": "(555) 010-0142",
+  "email": "hello@juniper-bakery.example",
+  "address": "214 Juniper Street, Springfield",
+  "global_logo": null,
+  "favicon": null,
+  "colors": {
+    "primary": "#5a3418",
+    "secondary": "#f4e7d3",
+    "accent": "#c4672f",
+    "bodyBackground": "#fffaf3",
+    "bodyText": "#3b2a1e",
+    "titleText": "#2a1a0f",
+    "headerBackground": "#fffaf3",
+    "headerText": "#2a1a0f",
+    "footerBackground": "#2a1a0f",
+    "footerText": "#f4e7d3",
+    "buttonBackground": "#5a3418",
+    "buttonText": "#ffffff",
+    "secondaryBackground": "#f4e7d3",
+    "secondaryButtonText": "#5a3418",
+    "overlayBackground": "rgba(42, 26, 15, .55)",
+    "whiteTextForOverlay": "#ffffff"
+  },
+  "fonts": [
+    {
+      "fontFamily": "'Fraunces', serif",
+      "useCase": "titlesFont"
+    },
+    {
+      "fontFamily": "'Inter', sans-serif",
+      "useCase": "paragraphsFont"
+    },
+    {
+      "fontFamily": "'Inter', sans-serif",
+      "useCase": "buttonsFont"
+    }
+  ],
+  "font_weights": {
+    "title": "600",
+    "body": "400",
+    "link": "600"
+  },
+  "spacing": {
+    "mobileTextGap": 14,
+    "desktopTextGap": 20,
+    "mobileButtonPadding": "12 20",
+    "desktopButtonPadding": "14 28",
+    "mobileGlobalSectionPadding": 40,
+    "desktopGlobalSectionPadding": 96,
+    "mobileGlobalSectionGap": 24,
+    "desktopGlobalSectionGap": 48,
+    "mobileButtonBorderRadius": 999,
+    "desktopButtonBorderRadius": 999,
+    "mobileGlobalBorderRadius": 12,
+    "desktopGlobalBorderRadius": 20,
+    "containerSmall": 760,
+    "containerMedium": 1000,
+    "containerLarge": 1200
+  },
+  "header": {
+    "position": "sticky",
+    "layout": "contained",
+    "width": 1200,
+    "elementOrder": [
+      "logo",
+      "links",
+      "icons",
+      "cta"
+    ],
+    "showPhone": true,
+    "links": [
+      {
+        "text": "Menu",
+        "href": "/menu",
+        "order": 0
+      },
+      {
+        "text": "About",
+        "href": "/about",
+        "order": 1
+      },
+      {
+        "text": "Guides",
+        "href": "/guides/how-to-store-sourdough",
+        "order": 2
+      },
+      {
+        "text": "Visit",
+        "href": "/visit",
+        "order": 3
+      }
+    ],
+    "ctaButton": {
+      "text": "Order ahead",
+      "link": "/visit",
+      "open_new_tab": false
+    }
+  },
+  "footer": {
+    "tagline": "Baked on Juniper Street since 2014."
+  },
+  "settings": {
+    "language": "en-US",
+    "imageQuality": 80,
+    "socialSharing": {
+      "siteName": "Juniper Street Bakery",
+      "defaultDescription": "Naturally leavened bread, pastries and seasonal cakes, baked every morning on Juniper Street.",
+      "defaultOgImage": "/media/juniper-bakery/sourdough-loaves-on-cooling-rack.svg",
+      "defaultOgType": "website",
+      "defaultTwitterCard": "summary_large_image",
+      "twitterHandle": "",
+      "defaultKeywords": ""
+    }
+  }
+}

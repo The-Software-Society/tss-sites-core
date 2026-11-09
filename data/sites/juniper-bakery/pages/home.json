@@ -1,0 +1,242 @@
+{
+  "uuid": "92f19e80-e8cf-57cb-a3d7-e0484744ec38",
+  "slug": "home",
+  "title": "Home",
+  "status": "published",
+  "metadata": {
+    "basic": {
+      "title": "Juniper Street Bakery | Sourdough Bread and Pastries",
+      "description": "A neighborhood sourdough bakery on Juniper Street. Naturally leavened bread, pastries and seasonal cakes, baked every morning.",
+      "canonical": "",
+      "keywords": "sourdough bakery",
+      "robots": {
+        "index": true,
+        "follow": true,
+        "noarchive": false,
+        "nosnippet": false
+      }
+    },
+    "openGraph": {
+      "title": "",
+      "description": "",
+      "image": "",
+      "type": "website",
+      "url": "",
+      "siteName": ""
+    },
+    "twitter": {
+      "card": "summary_large_image",
+      "title": "",
+      "description": "",
+      "image": ""
+    },
+    "structuredData": [
+      {
+        "id": "bakery",
+        "type": "LocalBusiness",
+        "data": {
+          "@type": "Bakery",
+          "name": "Juniper Street Bakery",
+          "telephone": "(555) 010-0142",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "214 Juniper Street",
+            "addressLocality": "Springfield"
+          },
+          "openingHours": "Tu-Su 07:00-14:00"
+        }
+      }
+    ],
+    "customMeta": []
+  },
+  "blocks": [
+    {
+      "uuid": "23d5acfc-9ce7-56a3-bb5c-68b60cd96a71",
+      "name": "Hero",
+      "order": 0,
+      "settings": {
+        "type": "Full Width",
+        "contentSize": null,
+        "sectionSize": null,
+        "contentPosition": "bottom left",
+        "buttonPosition": "Left",
+        "topBottomPadding": false,
+        "leftRightPadding": false,
+        "minHeight": 700,
+        "backgroundColor": "None",
+        "overlayPercent": 45,
+        "imageOverlayColor": "Global",
+        "opacityPercent": 100,
+        "overlayTextColor": true,
+        "layout": "None"
+      },
+      "content": {
+        "content": "<h1>Sourdough, baked this morning on Juniper Street</h1><p>Naturally leavened loaves, laminated pastries and seasonal cakes. Out of the oven by 7, gone by noon.</p>",
+        "buttons": [
+          {
+            "text": "See today's menu",
+            "link": "/menu",
+            "open_new_tab": false,
+            "styleType": "solid"
+          },
+          {
+            "text": "Plan a visit",
+            "link": "/visit",
+            "open_new_tab": false,
+            "styleType": "transparent"
+          }
+        ]
+      },
+      "media": "dd9b5c6c-bb1b-504d-801e-084cc7912cb7"
+    },
+    {
+      "uuid": "741d810d-c7cf-5b9b-8ef0-cf8d98b2d9b7",
+      "name": "Two Column",
+      "order": 1,
+      "settings": {
+        "type": "Contained",
+        "contentSize": 1100,
+        "sectionSize": 1200,
+        "contentPosition": "center center",
+        "buttonPosition": "Left",
+        "topBottomPadding": true,
+        "leftRightPadding": false,
+        "minHeight": 0,
+        "backgroundColor": "None"
+      },
+      "content": {
+        "columns": [
+          {
+            "type": "text",
+            "order": 0,
+            "content": "<h2>Slow bread, made the long way</h2><p>Every loaf starts with a starter we have fed daily for over a decade, a 36-hour cold ferment, and flour milled within a day's drive of the shop. It takes longer. The crust is darker, the crumb is open, and the bread keeps for days.</p>",
+            "buttons": [
+              {
+                "text": "Read our story",
+                "link": "/about",
+                "open_new_tab": false,
+                "styleType": "transparent"
+              }
+            ]
+          },
+          {
+            "type": "media",
+            "order": 1
+          }
+        ]
+      },
+      "media": "0ca422ea-42aa-5c10-907a-5c4b97497c5b"
+    },
+    {
+      "uuid": "5feee799-9dda-586a-a5bf-bbed50448f35",
+      "name": "Grid",
+      "order": 2,
+      "settings": {
+        "type": "Full Width",
+        "contentSize": null,
+        "sectionSize": null,
+        "contentPosition": "center left",
+        "buttonPosition": "Left",
+        "topBottomPadding": true,
+        "leftRightPadding": true,
+        "minHeight": 0,
+        "backgroundColor": "Secondary",
+        "layout": "Media Above",
+        "gridItemsPerRow": 3
+      },
+      "content": {
+        "contentAbove": "<h2>What comes out of the oven</h2><p>A short list, baked well.</p>",
+        "buttonsAbove": [],
+        "buttons": [
+          {
+            "text": "Full menu",
+            "link": "/menu",
+            "open_new_tab": false,
+            "styleType": "solid"
+          }
+        ],
+        "items": [
+          {
+            "content": "<h3>Country sourdough</h3><p>Our everyday loaf: wheat, a little whole rye, water, salt and time.</p>",
+            "media": "0ca422ea-42aa-5c10-907a-5c4b97497c5b"
+          },
+          {
+            "content": "<h3>Morning pastries</h3><p>Croissants, cardamom buns and a rotating fruit danish, laminated by hand.</p>",
+            "media": "851bb512-db3c-543c-861b-4a96e6ffe935"
+          },
+          {
+            "content": "<h3>Seasonal cakes</h3><p>Whole cakes to order with two days' notice, slices at the counter daily.</p>",
+            "media": "b4e9100a-18fc-5778-a0b9-16294cff5837"
+          }
+        ]
+      },
+      "media": null
+    },
+    {
+      "uuid": "a0bbe444-f4cd-5294-93c6-2410a6288e93",
+      "name": "FAQs",
+      "order": 3,
+      "settings": {
+        "type": "Contained",
+        "contentSize": 900,
+        "sectionSize": 1200,
+        "contentPosition": "center center",
+        "buttonPosition": "Left",
+        "topBottomPadding": false,
+        "leftRightPadding": false,
+        "minHeight": 0,
+        "backgroundColor": "None",
+        "layout": "Numbered"
+      },
+      "content": {
+        "contentAbove": "<h2>Before you visit</h2>",
+        "items": [
+          {
+            "question": "When is the bread ready?",
+            "answer": "<p>Loaves are on the shelves at 7 a.m. Tuesday through Sunday. Popular loaves sell out by late morning, so order ahead if you need one later.</p>"
+          },
+          {
+            "question": "Can I order ahead?",
+            "answer": "<p>Yes. Call the shop by 3 p.m. and we will hold your order for pickup the next day.</p>"
+          },
+          {
+            "question": "Do you bake gluten-free bread?",
+            "answer": "<p>No. Flour is everywhere in our kitchen, so we cannot promise anything is free of gluten.</p>"
+          }
+        ]
+      },
+      "media": null
+    },
+    {
+      "uuid": "9dca3dd4-5cc0-5c00-9c13-717267a3af45",
+      "name": "Single Column",
+      "order": 4,
+      "settings": {
+        "type": "Enclosed",
+        "contentSize": 760,
+        "sectionSize": 1200,
+        "contentPosition": "center center",
+        "buttonPosition": "Center",
+        "topBottomPadding": true,
+        "leftRightPadding": true,
+        "minHeight": 0,
+        "backgroundColor": "Primary",
+        "overlayTextColor": true
+      },
+      "content": {
+        "content": "<h2>Bread for the week, held for you</h2><p>Order by 3 p.m. and pick it up warm tomorrow morning.</p>",
+        "buttons": [
+          {
+            "text": "Order ahead",
+            "link": "/visit",
+            "open_new_tab": false,
+            "styleType": "solid"
+          }
+        ]
+      },
+      "media": null
+    }
+  ],
+  "created_at": "2026-10-01T15:00:00.000Z",
+  "updated_at": "2026-10-01T15:00:00.000Z"
+}

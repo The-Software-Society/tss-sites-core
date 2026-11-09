@@ -1,0 +1,61 @@
+{
+  "uuid": "3c4819a4-468f-5a7e-9b6a-338309fa5667",
+  "slug": "holiday-orders",
+  "title": "Holiday orders",
+  "status": "draft",
+  "metadata": {
+    "basic": {
+      "title": "Holiday Orders | Juniper Street Bakery",
+      "description": "Holiday pre-orders.",
+      "canonical": "",
+      "keywords": "",
+      "robots": {
+        "index": true,
+        "follow": true,
+        "noarchive": false,
+        "nosnippet": false
+      }
+    },
+    "openGraph": {
+      "title": "",
+      "description": "",
+      "image": "",
+      "type": "website",
+      "url": "",
+      "siteName": ""
+    },
+    "twitter": {
+      "card": "summary_large_image",
+      "title": "",
+      "description": "",
+      "image": ""
+    },
+    "structuredData": [],
+    "customMeta": []
+  },
+  "blocks": [
+    {
+      "uuid": "15a4fd7d-c0fd-5db7-8736-e4a89f5f68d9",
+      "name": "Single Column",
+      "order": 0,
+      "settings": {
+        "type": "Contained",
+        "contentSize": 1100,
+        "sectionSize": 1200,
+        "contentPosition": "center center",
+        "buttonPosition": "Left",
+        "topBottomPadding": true,
+        "leftRightPadding": false,
+        "minHeight": 0,
+        "backgroundColor": "None"
+      },
+      "content": {
+        "content": "<h1>Holiday orders</h1><p>Draft: holiday pre-orders open in November.</p>",
+        "buttons": []
+      },
+      "media": null
+    }
+  ],
+  "created_at": "2026-10-01T15:00:00.000Z",
+  "updated_at": "2026-10-01T15:00:00.000Z"
+}

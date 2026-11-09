@@ -1,0 +1,42 @@
+[
+  {
+    "uuid": "dd9b5c6c-bb1b-504d-801e-084cc7912cb7",
+    "name": "sourdough-loaves-on-cooling-rack",
+    "alt": "Two sourdough loaves cooling on a wire rack",
+    "url": "/media/juniper-bakery/sourdough-loaves-on-cooling-rack.svg",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "uuid": "851bb512-db3c-543c-861b-4a96e6ffe935",
+    "name": "morning-pastry-case",
+    "alt": "The morning pastry case with croissants and buns",
+    "url": "/media/juniper-bakery/morning-pastry-case.svg",
+    "width": 1200,
+    "height": 900
+  },
+  {
+    "uuid": "b4e9100a-18fc-5778-a0b9-16294cff5837",
+    "name": "flour-dusted-work-bench",
+    "alt": "A flour-dusted wooden work bench",
+    "url": "/media/juniper-bakery/flour-dusted-work-bench.svg",
+    "width": 1200,
+    "height": 900
+  },
+  {
+    "uuid": "dcc818b3-418a-5a7c-a202-0221da591f2d",
+    "name": "sourdough-starter-jar",
+    "alt": "A jar of active sourdough starter",
+    "url": "/media/juniper-bakery/sourdough-starter-jar.svg",
+    "width": 900,
+    "height": 1200
+  },
+  {
+    "uuid": "0ca422ea-42aa-5c10-907a-5c4b97497c5b",
+    "name": "sliced-country-loaf",
+    "alt": "A sliced country loaf showing an open crumb",
+    "url": "/media/juniper-bakery/sliced-country-loaf.svg",
+    "width": 1200,
+    "height": 900
+  }
+]

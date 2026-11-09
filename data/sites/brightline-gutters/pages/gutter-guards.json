@@ -1,0 +1,69 @@
+{
+  "uuid": "5d3d1117-91c4-59e1-8cbb-4435eaa584e8",
+  "slug": "gutter-guards",
+  "title": "Gutter Guards",
+  "status": "published",
+  "metadata": {
+    "basic": {
+      "title": "Gutter Guard Installation | Brightline Gutter Co.",
+      "description": "Gutter guards fitted to your existing gutters, sized to the roof they drain. Most installs take half a day.",
+      "canonical": "",
+      "keywords": "gutter guards",
+      "robots": {
+        "index": true,
+        "follow": true,
+        "noarchive": false,
+        "nosnippet": false
+      }
+    },
+    "openGraph": {
+      "title": "",
+      "description": "",
+      "image": "",
+      "type": "website",
+      "url": "",
+      "siteName": ""
+    },
+    "twitter": {
+      "card": "summary_large_image",
+      "title": "",
+      "description": "",
+      "image": ""
+    },
+    "structuredData": [],
+    "customMeta": []
+  },
+  "blocks": [
+    {
+      "uuid": "f446e54d-6e4a-5c4e-a48e-f00e03334f4a",
+      "name": "Large Media",
+      "order": 0,
+      "settings": {
+        "type": "Contained",
+        "contentSize": 1100,
+        "sectionSize": 1200,
+        "contentPosition": "center left",
+        "buttonPosition": "Left",
+        "topBottomPadding": true,
+        "leftRightPadding": false,
+        "minHeight": 0,
+        "backgroundColor": "None"
+      },
+      "content": {
+        "contentAbove": "<h1>Gutter guards</h1><p>Guards fitted to your existing gutters, sized to the roof they drain.</p>",
+        "content": "<p>Most installs take half a day.</p>",
+        "buttons": [
+          {
+            "text": "Call for a quote",
+            "link": "tel:5550100187",
+            "open_new_tab": false,
+            "styleType": "solid"
+          }
+        ]
+      },
+      "media": "57fe5187-b7f8-5f27-85f7-41ce69b85a4a"
+    }
+  ],
+  "created_at": "2026-10-01T15:00:00.000Z",
+  "updated_at": "2026-10-01T15:00:00.000Z"
+}

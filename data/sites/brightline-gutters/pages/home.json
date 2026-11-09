@@ -1,0 +1,116 @@
+{
+  "uuid": "b6f5fad8-6f0f-559f-b329-982a8c51a693",
+  "slug": "home",
+  "title": "Home",
+  "status": "published",
+  "metadata": {
+    "basic": {
+      "title": "Brightline Gutter Co. | Gutter Cleaning and Guards",
+      "description": "Gutter cleaning, repairs and gutter guard installation for homes in and around Springfield.",
+      "canonical": "",
+      "keywords": "gutter cleaning",
+      "robots": {
+        "index": true,
+        "follow": true,
+        "noarchive": false,
+        "nosnippet": false
+      }
+    },
+    "openGraph": {
+      "title": "",
+      "description": "",
+      "image": "",
+      "type": "website",
+      "url": "",
+      "siteName": ""
+    },
+    "twitter": {
+      "card": "summary_large_image",
+      "title": "",
+      "description": "",
+      "image": ""
+    },
+    "structuredData": [],
+    "customMeta": []
+  },
+  "blocks": [
+    {
+      "uuid": "604f6df1-a44d-5ddb-a0fc-e80dfdf8cc2a",
+      "name": "Hero",
+      "order": 0,
+      "settings": {
+        "type": "Full Width",
+        "contentSize": null,
+        "sectionSize": null,
+        "contentPosition": "center left",
+        "buttonPosition": "Left",
+        "topBottomPadding": false,
+        "leftRightPadding": false,
+        "minHeight": 620,
+        "backgroundColor": "None",
+        "overlayPercent": 55,
+        "imageOverlayColor": "Global",
+        "overlayTextColor": true,
+        "layout": "None"
+      },
+      "content": {
+        "content": "<h1>Gutters that drain the way they should</h1><p>Cleaning, repairs and gutter guards for homes in and around Springfield.</p>",
+        "buttons": [
+          {
+            "text": "Gutter cleaning",
+            "link": "/gutter-cleaning-springfield",
+            "open_new_tab": false,
+            "styleType": "solid"
+          },
+          {
+            "text": "Gutter guards",
+            "link": "/gutter-guards",
+            "open_new_tab": false,
+            "styleType": "transparent"
+          }
+        ]
+      },
+      "media": "1f1cbf6a-ca8d-54cc-b9b6-18f1ee16296d"
+    },
+    {
+      "uuid": "0eefa306-2a66-5549-ba6f-effbe5c791af",
+      "name": "Grid",
+      "order": 1,
+      "settings": {
+        "type": "Contained",
+        "contentSize": 1100,
+        "sectionSize": 1200,
+        "contentPosition": "center left",
+        "buttonPosition": "Left",
+        "topBottomPadding": true,
+        "leftRightPadding": false,
+        "minHeight": 0,
+        "backgroundColor": "None",
+        "layout": "Media Above",
+        "gridItemsPerRow": 3
+      },
+      "content": {
+        "contentAbove": "<h2>What we do</h2>",
+        "buttonsAbove": [],
+        "buttons": [],
+        "items": [
+          {
+            "content": "<h3>Cleaning</h3><p>Hand-cleaned gutters and flushed downspouts, with before and after photos.</p>",
+            "media": "1f1cbf6a-ca8d-54cc-b9b6-18f1ee16296d"
+          },
+          {
+            "content": "<h3>Guards</h3><p>Fitted gutter guards that keep leaves out without stopping the water.</p>",
+            "media": "57fe5187-b7f8-5f27-85f7-41ce69b85a4a"
+          },
+          {
+            "content": "<h3>Repairs</h3><p>Resealed seams, re-pitched runs and new hangers where the old ones failed.</p>",
+            "media": "319ec772-fc69-5e3c-957f-d3cc72dc0c7b"
+          }
+        ]
+      },
+      "media": null
+    }
+  ],
+  "created_at": "2026-10-01T15:00:00.000Z",
+  "updated_at": "2026-10-01T15:00:00.000Z"
+}

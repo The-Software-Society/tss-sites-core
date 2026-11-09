@@ -1,0 +1,98 @@
+{
+  "uuid": "5f5df42d-3359-5ff4-93f2-cb9fc43d3d14",
+  "id": "brightline-gutters",
+  "domain": "brightline-gutters.example",
+  "company": "Brightline Gutter Co.",
+  "description": "Gutter cleaning, repair and gutter guard installation for homes in and around Springfield.",
+  "phone": "(555) 010-0187",
+  "email": "office@brightline-gutters.example",
+  "global_logo": null,
+  "favicon": null,
+  "colors": {
+    "primary": "#1f3d5c",
+    "secondary": "#e6eef6",
+    "accent": "#e2a03f",
+    "bodyBackground": "#ffffff",
+    "bodyText": "#2b3440",
+    "titleText": "#14202d",
+    "headerBackground": "#ffffff",
+    "headerText": "#14202d",
+    "footerBackground": "#14202d",
+    "footerText": "#e6eef6",
+    "buttonBackground": "#1f3d5c",
+    "buttonText": "#ffffff",
+    "secondaryBackground": "#e6eef6",
+    "overlayBackground": "rgba(20, 32, 45, .55)",
+    "whiteTextForOverlay": "#ffffff"
+  },
+  "fonts": [
+    {
+      "fontFamily": "'Manrope', sans-serif",
+      "useCase": "titlesFont"
+    },
+    {
+      "fontFamily": "'Manrope', sans-serif",
+      "useCase": "paragraphsFont"
+    },
+    {
+      "fontFamily": "'Manrope', sans-serif",
+      "useCase": "buttonsFont"
+    }
+  ],
+  "font_weights": {
+    "title": "700",
+    "body": "400",
+    "link": "600"
+  },
+  "spacing": {
+    "mobileTextGap": 14,
+    "desktopTextGap": 20,
+    "mobileButtonPadding": "12 20",
+    "desktopButtonPadding": "14 26",
+    "mobileGlobalSectionPadding": 40,
+    "desktopGlobalSectionPadding": 88,
+    "mobileGlobalSectionGap": 24,
+    "desktopGlobalSectionGap": 40,
+    "mobileButtonBorderRadius": 8,
+    "desktopButtonBorderRadius": 8,
+    "mobileGlobalBorderRadius": 10,
+    "desktopGlobalBorderRadius": 16,
+    "containerSmall": 760,
+    "containerMedium": 1000,
+    "containerLarge": 1200
+  },
+  "header": {
+    "position": "static",
+    "layout": "contained",
+    "width": 1200,
+    "elementOrder": [
+      "logo",
+      "links",
+      "cta"
+    ],
+    "links": [
+      {
+        "text": "Gutter cleaning",
+        "href": "/gutter-cleaning-springfield",
+        "order": 0
+      },
+      {
+        "text": "Gutter guards",
+        "href": "/gutter-guards",
+        "order": 1
+      }
+    ],
+    "ctaButton": {
+      "text": "Call for a quote",
+      "link": "tel:5550100187",
+      "open_new_tab": false
+    }
+  },
+  "settings": {
+    "language": "en-US",
+    "socialSharing": {
+      "siteName": "Brightline Gutter Co.",
+      "defaultDescription": "Gutter cleaning, repair and gutter guards for Springfield homes."
+    }
+  }
+}

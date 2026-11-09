@@ -1,0 +1,317 @@
+{
+  "uuid": "e4648af0-0e53-5c1d-a809-636006373378",
+  "slug": "guides/how-to-store-sourdough",
+  "title": "How to Store Sourdough Bread",
+  "status": "published",
+  "metadata": {
+    "basic": {
+      "title": "How to Store Sourdough Bread So It Stays Fresh",
+      "description": "The best way to store sourdough bread: cut side down on day one, paper or cloth for four days, then freeze. Never refrigerate it.",
+      "canonical": "",
+      "keywords": "how to store sourdough bread",
+      "robots": {
+        "index": true,
+        "follow": true,
+        "noarchive": false,
+        "nosnippet": false
+      }
+    },
+    "openGraph": {
+      "title": "",
+      "description": "",
+      "image": "/media/juniper-bakery/sliced-country-loaf.svg",
+      "type": "website",
+      "url": "",
+      "siteName": ""
+    },
+    "twitter": {
+      "card": "summary_large_image",
+      "title": "",
+      "description": "",
+      "image": ""
+    },
+    "structuredData": [
+      {
+        "id": "article",
+        "type": "Article",
+        "data": {
+          "headline": "How to Store Sourdough Bread So It Stays Fresh",
+          "author": {
+            "@type": "Organization",
+            "name": "Juniper Street Bakery"
+          },
+          "datePublished": "2026-10-12",
+          "image": "https://juniper-bakery.example/media/juniper-bakery/sliced-country-loaf.svg"
+        }
+      },
+      {
+        "id": "org",
+        "type": "Organization",
+        "data": {
+          "name": "Juniper Street Bakery",
+          "url": "https://juniper-bakery.example"
+        }
+      }
+    ],
+    "customMeta": []
+  },
+  "blocks": [
+    {
+      "uuid": "7a1284af-3f7e-5830-b576-8a78d9b04deb",
+      "name": "Single Column",
+      "order": 0,
+      "settings": {
+        "type": "Contained",
+        "contentSize": 820,
+        "sectionSize": 1200,
+        "contentPosition": "center left",
+        "buttonPosition": "Left",
+        "topBottomPadding": true,
+        "leftRightPadding": false,
+        "minHeight": 0,
+        "backgroundColor": "None"
+      },
+      "content": {
+        "content": "<h1>How to Store Sourdough Bread So It Stays Fresh</h1><p>The best way to store sourdough bread is cut side down on a wooden board for the first day, then in a paper or cloth bag for up to four days. Freeze anything you will not eat by then. Never keep sourdough in the refrigerator, which makes it stale faster than leaving it on the counter.</p>",
+        "buttons": []
+      },
+      "media": null
+    },
+    {
+      "uuid": "1848c296-3cd9-5340-9314-c8257a944548",
+      "name": "Table of Contents",
+      "order": 1,
+      "settings": {},
+      "content": {
+        "title": "In this guide",
+        "items": [
+          {
+            "title": "Why sourdough keeps longer",
+            "anchor": "why-it-keeps"
+          },
+          {
+            "title": "Storing sourdough day by day",
+            "anchor": "day-by-day"
+          },
+          {
+            "title": "How to freeze sourdough",
+            "anchor": "freezing"
+          },
+          {
+            "title": "Reviving a stale loaf",
+            "anchor": "reviving"
+          },
+          {
+            "title": "Questions",
+            "anchor": "questions"
+          }
+        ]
+      },
+      "media": null
+    },
+    {
+      "uuid": "105935ec-cfcd-5d3b-8e06-a1685e01106b",
+      "name": "Two Column",
+      "order": 2,
+      "settings": {
+        "type": "Contained",
+        "contentSize": 1100,
+        "sectionSize": 1200,
+        "contentPosition": "center center",
+        "buttonPosition": "Left",
+        "topBottomPadding": false,
+        "leftRightPadding": false,
+        "minHeight": 0,
+        "backgroundColor": "None",
+        "anchorId": "why-it-keeps"
+      },
+      "content": {
+        "columns": [
+          {
+            "type": "text",
+            "order": 0,
+            "content": "<h2>Why sourdough keeps longer than other bread</h2><p>Sourdough stays fresh longer because of its acidity. The lactic and acetic acids made during a long ferment slow down mold, and the thick crust holds moisture in the crumb. A yeasted sandwich loaf can go stale in a day. A well-baked sourdough loaf is still good on day four.</p><p>That only holds if you store it well. Air dries the crumb, plastic softens the crust, and cold speeds up staling. The <a href=\"https://www.usda.gov/\">U.S. Department of Agriculture</a> publishes general guidance on storing baked goods safely.</p>",
+            "buttons": []
+          },
+          {
+            "type": "media",
+            "order": 1
+          }
+        ]
+      },
+      "media": "0ca422ea-42aa-5c10-907a-5c4b97497c5b"
+    },
+    {
+      "uuid": "952e4ea9-7276-5440-9ec8-d17a1d999b16",
+      "name": "Steps",
+      "order": 3,
+      "settings": {
+        "type": "Contained",
+        "contentSize": 900,
+        "sectionSize": 1200,
+        "contentPosition": "center center",
+        "buttonPosition": "Left",
+        "topBottomPadding": true,
+        "leftRightPadding": false,
+        "minHeight": 0,
+        "backgroundColor": "None",
+        "anchorId": "day-by-day"
+      },
+      "content": {
+        "contentAbove": "<h2>Storing sourdough bread day by day</h2><p>Use this sequence from the day you buy the loaf.</p>",
+        "buttons": [],
+        "items": [
+          {
+            "title": "Day one: cut side down",
+            "content": "<p>Leave the loaf on a wooden board with the cut face down. The crust protects the rest, and you need no bag at all.</p>",
+            "media": null
+          },
+          {
+            "title": "Days two to four: paper or cloth",
+            "content": "<p>Move the bread into a paper bag or a linen bread bag. It breathes, so the crust stays crisp while the crumb stays soft.</p>",
+            "media": null
+          },
+          {
+            "title": "After day four: freeze",
+            "content": "<p>Slice what is left and freeze it. Sliced bread toasts straight from the freezer.</p>",
+            "media": null
+          }
+        ]
+      },
+      "media": null
+    },
+    {
+      "uuid": "cdae16af-f446-59db-b3df-365c1bece72f",
+      "name": "Two Column",
+      "order": 4,
+      "settings": {
+        "type": "Contained",
+        "contentSize": 1100,
+        "sectionSize": 1200,
+        "contentPosition": "center center",
+        "buttonPosition": "Left",
+        "topBottomPadding": false,
+        "leftRightPadding": false,
+        "minHeight": 0,
+        "backgroundColor": "None",
+        "reverse": true,
+        "anchorId": "freezing"
+      },
+      "content": {
+        "columns": [
+          {
+            "type": "text",
+            "order": 0,
+            "content": "<h2>How to freeze sourdough bread</h2><p>To freeze sourdough, let it cool completely, slice it, and seal it in a freezer bag with the air pressed out. It keeps for about three months. Thaw slices in the toaster, or thaw a half loaf on the counter for two hours and warm it in a hot oven for five minutes.</p><p>Freezing is the only storage that stops staling. Everything else just slows it down.</p>",
+            "buttons": []
+          },
+          {
+            "type": "media",
+            "order": 1
+          }
+        ]
+      },
+      "media": "dcc818b3-418a-5a7c-a202-0221da591f2d"
+    },
+    {
+      "uuid": "796d4161-a43c-59aa-8f97-86175d7b025f",
+      "name": "Single Column",
+      "order": 5,
+      "settings": {
+        "type": "Contained",
+        "contentSize": 820,
+        "sectionSize": 1200,
+        "contentPosition": "center left",
+        "buttonPosition": "Left",
+        "topBottomPadding": false,
+        "leftRightPadding": false,
+        "minHeight": 0,
+        "backgroundColor": "None",
+        "anchorId": "reviving"
+      },
+      "content": {
+        "content": "<h2>Reviving a stale sourdough loaf</h2><p>A loaf that has gone hard is not finished. Run the crust under the tap for a second, then bake it at 400\u00b0F for eight to ten minutes. The water turns to steam, softens the crumb, and crisps the crust again. Eat it the same day.</p><p>Bread past saving makes good croutons, breadcrumbs or a panzanella. Our <a href=\"/menu\">menu</a> lists the loaves that hold up best.</p>",
+        "buttons": [
+          {
+            "text": "See the bread menu",
+            "link": "/menu",
+            "open_new_tab": false,
+            "styleType": "solid"
+          }
+        ]
+      },
+      "media": null
+    },
+    {
+      "uuid": "00b1554d-ee15-5225-a78e-511a653149eb",
+      "name": "FAQs",
+      "order": 6,
+      "settings": {
+        "type": "Contained",
+        "contentSize": 900,
+        "sectionSize": 1200,
+        "contentPosition": "center center",
+        "buttonPosition": "Left",
+        "topBottomPadding": false,
+        "leftRightPadding": false,
+        "minHeight": 0,
+        "backgroundColor": "None",
+        "layout": "Default",
+        "anchorId": "questions"
+      },
+      "content": {
+        "contentAbove": "<h2>Questions about storing sourdough</h2>",
+        "items": [
+          {
+            "question": "Should you refrigerate sourdough bread?",
+            "answer": "<p>No. The refrigerator makes bread go stale about three times faster than room temperature. Keep it on the counter or in the freezer.</p>"
+          },
+          {
+            "question": "Is a plastic bag bad for sourdough?",
+            "answer": "<p>A plastic bag keeps the crumb soft but turns the crust leathery and can trap moisture that encourages mold. Paper or cloth is better for the first few days.</p>"
+          },
+          {
+            "question": "How long does sourdough last?",
+            "answer": "<p>Stored well, sourdough bread stays good for four to five days at room temperature and about three months in the freezer.</p>"
+          },
+          {
+            "question": "Can you freeze a whole loaf?",
+            "answer": "<p>Yes, but sliced bread is easier to use. A whole loaf needs a few hours on the counter to thaw.</p>"
+          }
+        ]
+      },
+      "media": null
+    },
+    {
+      "uuid": "b9afaab2-a17f-5a8d-b8fb-b3633f193bc9",
+      "name": "Single Column",
+      "order": 7,
+      "settings": {
+        "type": "Enclosed",
+        "contentSize": 760,
+        "sectionSize": 1200,
+        "contentPosition": "center center",
+        "buttonPosition": "Center",
+        "topBottomPadding": true,
+        "leftRightPadding": true,
+        "minHeight": 0,
+        "backgroundColor": "Primary",
+        "overlayTextColor": true
+      },
+      "content": {
+        "content": "<h2>Get a loaf worth storing</h2><p>Order by 3 p.m. for pickup tomorrow morning.</p>",
+        "buttons": [
+          {
+            "text": "Order ahead",
+            "link": "/visit",
+            "open_new_tab": false,
+            "styleType": "solid"
+          }
+        ]
+      },
+      "media": null
+    }
+  ],
+  "created_at": "2026-10-12T14:00:00.000Z",
+  "updated_at": "2026-10-12T14:00:00.000Z"
+}

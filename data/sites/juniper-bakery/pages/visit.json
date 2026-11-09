@@ -1,0 +1,68 @@
+{
+  "uuid": "3c6e6c95-944d-58c4-97a8-670b45f6b2ba",
+  "slug": "visit",
+  "title": "Visit",
+  "status": "published",
+  "metadata": {
+    "basic": {
+      "title": "Visit and Order Ahead | Juniper Street Bakery",
+      "description": "Hours, address and how to order bread ahead for next-morning pickup at Juniper Street Bakery.",
+      "canonical": "",
+      "keywords": "bakery hours",
+      "robots": {
+        "index": true,
+        "follow": true,
+        "noarchive": false,
+        "nosnippet": false
+      }
+    },
+    "openGraph": {
+      "title": "",
+      "description": "",
+      "image": "",
+      "type": "website",
+      "url": "",
+      "siteName": ""
+    },
+    "twitter": {
+      "card": "summary_large_image",
+      "title": "",
+      "description": "",
+      "image": ""
+    },
+    "structuredData": [],
+    "customMeta": []
+  },
+  "blocks": [
+    {
+      "uuid": "11dfe4ee-b25c-5d88-a692-dd99ad31b578",
+      "name": "Single Column",
+      "order": 0,
+      "settings": {
+        "type": "Contained",
+        "contentSize": 900,
+        "sectionSize": 1200,
+        "contentPosition": "center center",
+        "buttonPosition": "Left",
+        "topBottomPadding": true,
+        "leftRightPadding": false,
+        "minHeight": 0,
+        "backgroundColor": "None"
+      },
+      "content": {
+        "content": "<h1>Visit the bakery</h1><p>214 Juniper Street, Springfield. Open Tuesday to Sunday, 7 a.m. to 2 p.m., or until the bread runs out.</p><p>To order ahead, call <a href=\"tel:5550100142\">(555) 010-0142</a> by 3 p.m. for pickup the next morning.</p>",
+        "buttons": [
+          {
+            "text": "Call the shop",
+            "link": "tel:5550100142",
+            "open_new_tab": false,
+            "styleType": "solid"
+          }
+        ]
+      },
+      "media": null
+    }
+  ],
+  "created_at": "2026-10-01T15:00:00.000Z",
+  "updated_at": "2026-10-01T15:00:00.000Z"
+}
