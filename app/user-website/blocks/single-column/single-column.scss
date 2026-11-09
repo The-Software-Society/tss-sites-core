@@ -1,0 +1,221 @@
+/************************************************
+  Single Column
+************************************************/
+#user-site {
+  .user-website-single-column {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    max-width: 100%;
+
+    &.position-top-left {
+      justify-content: flex-start;
+
+      .content-wrapper {
+        justify-content: flex-start;
+      }
+    }
+
+    &.position-top-center {
+      justify-content: center;
+
+      .content-wrapper {
+        justify-content: flex-start;
+      }
+    }
+
+    &.position-top-right {
+      justify-content: flex-end;
+
+      .content-wrapper {
+        justify-content: flex-start;
+      }
+    }
+
+    &.position-center-left {
+      justify-content: flex-start;
+
+      .content-wrapper {
+        justify-content: center;
+      }
+    }
+
+    &.position-center-center {
+      justify-content: center;
+
+      .content-wrapper {
+        justify-content: center;
+      }
+    }
+
+    &.position-center-right {
+      justify-content: flex-end;
+
+      .content-wrapper {
+        justify-content: center;
+      }
+    }
+
+    &.position-bottom-left {
+      justify-content: flex-start;
+
+      .content-wrapper {
+        justify-content: flex-end;
+      }
+    }
+
+    &.position-bottom-center {
+      justify-content: center;
+
+      .content-wrapper {
+        justify-content: flex-end;
+      }
+    }
+
+    &.position-bottom-right {
+      justify-content: flex-end;
+
+      .content-wrapper {
+        justify-content: flex-end;
+      }
+    }
+
+    .container {
+      margin: unset;
+    }
+
+    .section-container {
+      display: flex;
+    }
+
+    .grid-wrapper {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    .content-wrapper {
+      display: flex;
+      flex-flow: column;
+      gap: 15px;
+      width: 100%;
+      padding: var(--responsive-global-section-padding);
+      position: relative;
+      z-index: 1;
+    }
+
+    .media-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      overflow: hidden;
+
+      .overlay {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+        top: 0;
+        left: 0;
+
+        &.primary {
+          background: var(--color-primary);
+        }
+
+        &.secondary {
+          background: var(--color-secondary);
+        }
+
+        &.accent {
+          background: var(--color-accent);
+        }
+
+        &.global {
+          background: var(--color-overlay-background);
+        }
+      }
+
+      img,
+      video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &.full-width {
+      .container {
+        max-width: 100%;
+      }
+
+      .media-wrapper {
+        border-radius: 0;
+      }
+    }
+
+    &.enclosed {
+      border-radius: var(--responsive-global-border-radius);
+      // A card needs ground under it. `margin: 0 auto` centred it and removed
+      // the vertical margin at the same time, so a tinted enclosed block ended
+      // flush against whatever followed - most visibly the closing call to
+      // action sitting directly on the footer.
+      margin: var(--responsive-global-section-padding) auto;
+    }
+
+    &.contain {
+
+      img,
+      video {
+        object-fit: contain;
+      }
+    }
+
+    &.overlay-text {
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p {
+        color: var(--color-white-text-for-overlay);
+      }
+    }
+
+    &.primary {
+      background: var(--color-primary);
+    }
+
+    &.secondary {
+      background: var(--color-secondary);
+    }
+
+    &.accent {
+      background: var(--color-accent);
+    }
+
+    &.left-right-padding {
+      padding-left: var(--responsive-global-section-padding);
+      padding-right: var(--responsive-global-section-padding);
+    }
+
+    &.top-bottom-padding {
+      padding-top: var(--responsive-global-section-padding);
+      padding-bottom: var(--responsive-global-section-padding);
+    }
+
+    &.margin-top {
+      margin-top: var(--responsive-global-section-padding);
+    }
+    &.margin-left {
+      margin-left: var(--responsive-global-section-padding);
+    }
+    &.margin-right {
+      margin-right: var(--responsive-global-section-padding);
+    }
+  }
+}

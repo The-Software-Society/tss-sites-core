@@ -1,0 +1,359 @@
+/************************************************
+Breakpoints
+************************************************/
+@mixin breakpoint($class) {
+  @if $class==xxs {
+    @media (max-width: 400px) {
+      @content;
+    }
+  }
+
+  @else if $class==xs {
+    @media (max-width: 425px) {
+      @content;
+    }
+  }
+
+  @else if $class==sm {
+    @media (max-width: 576px) {
+      @content;
+    }
+  }
+
+  @else if $class==md {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+
+  @else if $class==lg {
+    @media (max-width: 991px) {
+      @content;
+    }
+  }
+
+  @else if $class==xl {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  }
+
+  @else if $class==mair {
+    @media (max-width: 1350px) {
+      @content;
+    }
+  }
+
+  @else if $class==extramair {
+    @media (max-width: 1425px) {
+      @content;
+    }
+  }
+
+  @else if $class==xxl {
+    @media (max-width: 1600px) {
+      @content;
+    }
+  }
+
+  @else {
+    @warn "Breakpoint mixin supports: sm, md, lg, xxl";
+  }
+}
+
+@mixin site-breakpoint($class) {
+  @if $class==xxs { @container user-site (max-width: 400px) { @content; } }
+  @else if $class==xs { @container user-site (max-width: 425px) { @content; } }
+  @else if $class==sm { @container user-site (max-width: 576px) { @content; } }
+  @else if $class==md { @container user-site (max-width: 768px) { @content; } }
+  @else if $class==lg { @container user-site (max-width: 991px) { @content; } }
+  @else if $class==xl { @container user-site (max-width: 1200px) { @content; } }
+  @else if $class==mair { @container user-site (max-width: 1350px) { @content; } }
+  @else if $class==extramair { @container user-site (max-width: 1425px) { @content; } }
+  @else if $class==xxl { @container user-site (max-width: 1600px) { @content; } }
+}
+
+/************************************************
+Imports
+************************************************/
+/* For custom font imports folder structure follows same as if we were to import an image
+@font-face {
+  font-family: myFirstFont;
+  src: url(sansation_light.otf); //or .ttf
+}
+*/
+// Font imports moved to app/layout.tsx (admin-only) to avoid render-blocking on tenant sites
+$prompt: 'Prompt',
+sans-serif;
+$proxima: 'Proxima Nova',
+sans-serif;
+$figtree: 'Figtree',
+sans-serif;
+$satoshi: 'Satoshi',
+sans-serif;
+
+%shadow {
+  -webkit-box-shadow: 0px 5px 10px -1px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 5px 10px -1px rgba(0, 0, 0, 0.25);
+}
+
+/************************************************
+Colors
+************************************************/
+$glassmorphism: linear-gradient(to bottom, rgba(255, 255, 255, .06) 0%, rgba(255, 255, 255, .024) 100%);
+
+$light-blue: #1b7ea6;
+
+$black: #000000; //For general font color
+$links: green; //change this to whatever the secondary overall color for the website is
+
+$white: #ffffff;
+$white-2: #E7E7E7;
+$white-3: #F5F5F5;
+$dark-grey: #242424;
+$dark-charcoal: #333;
+$luxury-white: #fafafa;
+$luxury-white-40: rgba($luxury-white, 0.4);
+$luxury-white-20: rgba($luxury-white, 0.2);
+$charcoal: #353342;
+$grayscale: #9f9f9f;
+$very-light-grey: #cdcdcd;
+$main-background-color: #100c33;
+$secondary-background-color: #1b1454;
+
+$purple: #4B38F3;
+$purple-2: #4E39F4;
+$purple-3: #0d073a;
+$lavender-indigo: #8643FF;
+$purple-5: #331E78;
+$purple-6: #5724C1;
+$purple-7: #4C13D1;
+$purple-8: #3B1782;
+$purple-9: #460CAE;
+$purple-10: #A8ADDD;
+$purple-11: #0a062a;
+$purple-12: #2D39A9;
+$purple-13: #917BE4;
+$purple-14: #3124A2;
+
+// Sales surfaces (CRM, funnels, the home dashboard): a neutral near-black
+// canvas with one raised step, so identity colors and the primary action carry
+// the brand instead of every surface being tinted purple.
+$sales-canvas: mix($black, $main-background-color, 55%);
+$sales-raised: mix($luxury-white, $sales-canvas, 6%);
+$majorelle-blue: #6455EC;
+$majorelle-blue-35: rgba($majorelle-blue, 0.35);
+$dark-lavendar: #664ea0;
+$medium-lavender: #965CFF;
+$han-purple: #6519EF;
+
+$persian-indigo: #2b0079;
+$persian-indigo-20: rgba(#2b0079, .2);
+$persian-indigo-60: rgba(#2b0079, .6);
+
+$red: #C70101;
+$red-2: #b80404;
+
+$pink: #DC50FF;
+$hot-pink: #D03CF5;
+
+
+$green: #5BA36B;
+$green-2: #51B116;
+$green-3: #008000;
+
+$blue-1: #6FA3F0;
+$blue-2: #2432B2;
+$blue-bonnet: #3520F4;
+$cadmium-blue: #1C0B85;
+$aqua-green: #15E5A6;
+
+$gray: #BCBCBC;
+$gray-2: #B2B2B2;
+$silver-sand: #C5C5C5;
+$gray-4: #EFEFEF;
+$gray-5: #B6B1DD;
+$gray-6: #CBCBCB;
+$gray-7: #E6E6E6;
+$gray-8: #A4A4A4;
+$gray-9: #CDC6DE;
+$gray-10: #726F73;
+$gray-11: #5E5A78;
+$gray-12: #959595;
+$gray-13: #63576C;
+$platinum: #E2E2E2;
+$bright-gray: #EAEAEA;
+$gray-16: #B3B3B3;
+$gray-17: #ACAAB6;
+$gray-18: #D6D6D6;
+$gray-19: #EBEBEB;
+
+$yellow: #FFA800;
+$marigold: #F99F18;
+
+$F2F2F2: #f2f2f2;
+$FFFFFF: #ffffff;
+$C7C8CA: #c7c8ca;
+$D3D3D3: #d3d3d3;
+$A4A4A4: #A4A4A4;
+$color_2D2B39: #2d2b39;
+$color_8C8C8C: #8c8c8c;
+$color_000000: #000000;
+$color_7C9CBA: #7c9cba;
+$color_898A8C: #898a8c;
+$color_373350: #373350;
+$color_464166: #464166;
+
+// Notification left-border colors
+// Muted, cool-shifted tones that harmonize with blue-purple gradient
+$notify-red:    #C44D6A;   // Dusty crimson — red with a purple undertone
+$notify-green:  #3B9B8F;   // Teal-leaning green — shifted toward blue
+$notify-blue:   #5A8AE6;   // Soft periwinkle — sits naturally within the gradient family
+$notify-yellow: #C9944A;   // Muted amber/gold — warm but desaturated enough to not clash
+
+$border-radius-5: 5px;
+$small-border-radius: 10px;
+$medium-border-radius: 15px;
+$large-border-radius: 20px;
+
+@mixin purple-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(101, 25, 239, 0.45) #2B0079;
+
+  /* Using end color of gradient */
+  /* Webkit browsers - can use the gradient */
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, rgba(53, 32, 244, 0.45) 0%, rgba(101, 25, 239, 0.45) 100%);
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #2B0079;
+  }
+}
+
+$button-gradient: linear-gradient(180deg, #412fff 0%, $majorelle-blue 100%);
+$button-hover: #422EF1;
+
+$black-purple-lineaer: linear-gradient(180deg, rgba(#000000, .01) 0%, rgba(#000000, 0) 100%),
+rgba($han-purple, .13);
+$secondary-layout: linear-gradient(180deg, rgba(#0d0d0d, .02) 0%, rgba(#242424, .02) 100%),
+rgba($han-purple, .13);
+
+$modal-on-modal: linear-gradient(to bottom, #3520F4 0%, #6519EF 100%),
+linear-gradient(to bottom, rgba(134, 67, 255, 0.91) 0%, rgba(134, 67, 255, 0.91) 100%),
+linear-gradient(to bottom, rgba(53, 32, 244, 0.8) 0%, rgba(101, 25, 239, 0.8) 100%);
+
+$linear-gradient: linear-gradient(to bottom, $blue-bonnet 0%, $han-purple 100%);
+$linear-gradient-15: linear-gradient(to bottom, rgba($blue-bonnet, 0.15) 0%, rgba($han-purple, 0.15) 100%);
+$linear-gradient-20: linear-gradient(to bottom, rgba($blue-bonnet, 0.20) 0%, rgba($han-purple, 0.20) 100%);
+$linear-gradient-45: linear-gradient(to bottom, rgba($blue-bonnet, 0.45) 0%, rgba($han-purple, 0.45) 100%);
+$linear-gradient-65: linear-gradient(to bottom, rgba($blue-bonnet, 0.65) 0%, rgba($han-purple, 0.65) 100%);
+$gradient-color-highlight: linear-gradient(180deg, #3520F4 0%, #6519EF 100%);
+
+$dark-linear-gradient-65: linear-gradient(to bottom, rgba($blue-bonnet, 0.65) 0%, rgba(#7427ff, 0.65) 100%),
+rgba(0, 0, 0, .3);
+
+$purple-linear-gradient: linear-gradient(rgba(134, 67, 255, 0.365) 0%, rgba(134, 67, 255, 0.365) 100%),
+linear-gradient(rgba(53, 32, 244, 0.32) 0%, rgba(101, 25, 239, 0.32) 100%);
+
+$test: linear-gradient(180deg, rgba(53, 32, 244, 0.65) 500%, rgba(101, 25, 239, 0.65) 1000%),
+linear-gradient(180deg, rgba(43, 26, 248, 0.53) 500%, rgba(101, 25, 239, 0.53) 1000%),
+#000;
+
+
+$detailed-table-popup: linear-gradient(180deg, rgba(43, 26, 248, 0.53) 0%, rgba(101, 25, 239, 0.53) 100%),
+#000;
+$detailed-table-popup-top: linear-gradient(180deg, rgba(43, 26, 248, 0.70) 0%, rgba(101, 25, 239, 0.70) 100%),
+#000;
+
+$linear-gradient-light-purple: linear-gradient(rgba(134, 67, 255, 0.365) 0%, rgba(134, 67, 255, 0.365) 100%),
+linear-gradient(rgba(53, 32, 244, 0.32) 0%, rgba(101, 25, 239, 0.32) 100%);
+$linear-gradient-light-purple-half: linear-gradient(rgba(134, 67, 255, 0.18) 0%, rgba(134, 67, 255, 0.18) 50%),
+linear-gradient(rgba(53, 32, 244, 0.16) 0%, rgba(101, 25, 239, 0.16) 50%);
+
+$modal-button-gradient: linear-gradient(180deg, rgba(65, 47, 255, 0.70) -19.35%, rgba(129, 71, 251, 0.70) 116.13%);
+$modal-button-gradient-hover: linear-gradient(180deg, rgba(65, 47, 255, 1) -19.35%, rgba(129, 71, 251, 1) 116.13%);
+
+$box-shadow: 0px 0px 40px -3px rgba(0, 0, 0, 0.25);
+$box-shadow-2: 0px 0px 40px -3px rgba(0, 0, 0, 0.11);
+
+$xl-dark-linear-gradient: linear-gradient(to bottom, $blue-bonnet 0%, $han-purple 100%), rgba(0, 0, 0, 1);
+
+* {
+  box-sizing: border-box;
+}
+
+/************************************************
+Global Functions and Variables
+************************************************/
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@function range($min-size, $max-size) {
+  //check if receiving a css var that is not set yet
+  $min-size: if(type-of($min-size)=='number', $min-size, 0);
+  $max-size: if(type-of($max-size)=='number', $max-size, 0);
+
+  $min: strip-unit($min-size);
+  $max: strip-unit($max-size);
+
+  // Calculate the difference
+  $size-range: $max - $min;
+
+  // Use the calculated values
+  @return clamp(#{$min-size},
+    calc(#{$min-size} + #{$size-range} * ((100cqw - 390px) / (1728 - 390))),
+    #{$max-size});
+}
+
+// .some-class {
+// 	padding: range(10px, 20px) range(10px, 20px) range(10px, 20px) range(10px, 20px);
+// }
+
+@function desktopRange($min-size, $max-size) {
+  $min: strip-unit($min-size);
+  $max: strip-unit($max-size);
+
+  // Calculate the difference
+  $size-range: $max - $min;
+
+  // Use the calculated values
+  @return clamp(#{$min-size},
+    calc(#{$min-size} + #{$size-range} * ((100vw - 992px) / (1728 - 992))),
+    #{$max-size});
+}
+
+@function negativeRange($min-size, $max-size) {
+  $min: strip-unit($min-size);
+  $max: strip-unit($max-size);
+  // Calculate the difference
+  $size-range: $max - $min; // Inverted the subtraction order
+  // Use the calculated values
+  @return clamp(#{$max-size}, calc(#{$min-size} + #{$size-range} * ((100vw - 390px) / (1728 - 390))), #{$min-size});
+}
+
+:root {
+  --sidebar-width: 71px;
+
+  // Avatar identity ramp — consumed by getAvatarColor() in app/utils/generalFunctions.ts,
+  // which hashes a uuid to an index so a person keeps the same colour everywhere without
+  // us storing one per user. Defined here rather than in TS so the palette has a single
+  // source of truth and follows the tokens if they ever move.
+  //
+  // Every entry clears 4.5:1 against $luxury-white, because the bubble carries the
+  // person's initial at 11px and small text needs that ratio. The semantic $notify-*
+  // colours are deliberately excluded: a green or red avatar reads as a status cue when
+  // it means nothing. Entries are also kept perceptually apart (min deltaE ~15) so two
+  // teammates in the same stack never look like the same person.
+  //
+  // If you add or remove an entry, update AVATAR_COLOR_COUNT in generalFunctions.ts.
+  --avatar-color-0: #{$purple-9};
+  --avatar-color-1: #{$purple-12};
+  --avatar-color-2: #{$purple-7};
+  --avatar-color-3: #{$blue-bonnet};
+  --avatar-color-4: #{$dark-lavendar};
+  --avatar-color-5: #{$gray-11};
+  --avatar-color-6: #{$majorelle-blue};
+  --avatar-color-7: #{$lavender-indigo};
+}

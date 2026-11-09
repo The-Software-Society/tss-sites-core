@@ -1,0 +1,203 @@
+@use '@/styles/variables.scss' as *;
+
+/************************************************
+  Steps — an ordered sequence
+************************************************/
+#user-site {
+  .user-website-steps {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+
+    .grid-wrapper {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .content-wrapper {
+      display: flex;
+      flex-flow: column;
+      gap: range(26px, 40px);
+      width: 100%;
+      min-width: 0;
+    }
+
+    .content-above {
+      display: flex;
+      flex-flow: column;
+      gap: var(--content-above-gap, range(10px, 16px));
+    }
+
+    // The numbers are generated, not written. Nothing in the document says
+    // "01" — the order is the `<ol>`, so renumbering is a matter of moving a
+    // step rather than editing every step after it, and a reader on a screen
+    // reader is told the position once rather than twice.
+    .steps-list {
+      display: flex;
+      flex-flow: column;
+      counter-reset: step;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .step {
+      counter-increment: step;
+      position: relative;
+      display: grid;
+      grid-template-columns: range(38px, 50px) 1fr;
+      gap: range(18px, 28px);
+      padding-bottom: range(22px, 34px);
+
+      &:last-child { padding-bottom: 0; }
+
+      &::before {
+        content: counter(step, decimal-leading-zero);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        aspect-ratio: 1;
+        width: 100%;
+        border: 1px solid color-mix(in srgb, currentColor 24%, transparent);
+        border-radius: 50%;
+        background: color-mix(in srgb, currentColor 7%, transparent);
+        color: var(--color-title-text);
+        font-family: var(--font-titles);
+        font-size: calc(var(--font-size-body) * .78);
+        font-variant-numeric: tabular-nums;
+        font-weight: 600;
+        line-height: 1;
+      }
+
+      // The rail between the markers is the part that says "and then". It
+      // fades out downward so the sequence reads as continuing rather than as
+      // a set of boxes wired together.
+      &:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        top: calc(range(38px, 50px) + range(8px, 12px));
+        bottom: range(6px, 10px);
+        left: calc(range(38px, 50px) / 2);
+        width: 1px;
+        transform: translateX(-.5px);
+        background: linear-gradient(
+          to bottom,
+          color-mix(in srgb, currentColor 26%, transparent),
+          color-mix(in srgb, currentColor 6%, transparent)
+        );
+      }
+    }
+
+    .step-body {
+      display: flex;
+      align-items: flex-start;
+      gap: range(20px, 34px);
+      min-width: 0;
+    }
+
+    .step-text {
+      display: flex;
+      flex-flow: column;
+      gap: range(4px, 7px);
+      flex: 1 1 auto;
+      min-width: 0;
+      // Sets the title's first line against the middle of its marker, so the
+      // number and the thing it numbers sit on one optical line.
+      padding-top: range(5px, 9px);
+
+      // A step title is a label on a paragraph, not a section heading. Left at
+      // its document level it renders at the site's h4 display size and turns
+      // a five-step process into five banners with a sentence under each.
+      h4 {
+        font-size: var(--font-size-h5);
+        line-height: 1.25;
+      }
+
+      > :first-child { margin-top: 0; }
+      > :last-child { margin-bottom: 0; }
+    }
+
+    .step-media {
+      flex: 0 0 auto;
+      width: range(180px, 320px);
+      max-width: 100%;
+      overflow: hidden;
+      border-radius: var(--responsive-global-border-radius);
+
+      img, video {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .button-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    /* ---------------------------------------------- section-level utilities */
+    &.contain {
+      .step-media img,
+      .step-media video { object-fit: contain; }
+    }
+
+    &.overlay-text {
+      h1, h2, h3, h4, h5, h6, p, li { color: var(--color-white-text-for-overlay); }
+      .step::before { color: var(--color-white-text-for-overlay); }
+    }
+
+    &.enclosed { border-radius: var(--responsive-global-border-radius); }
+    &.primary { background: var(--color-primary); }
+    &.secondary { background: var(--color-secondary); }
+    &.accent { background: var(--color-accent); }
+
+    &.left-right-padding {
+      padding-left: var(--responsive-global-section-padding);
+      padding-right: var(--responsive-global-section-padding);
+    }
+    &.top-bottom-padding {
+      padding-top: var(--responsive-global-section-padding);
+      padding-bottom: var(--responsive-global-section-padding);
+    }
+    &.margin-top { margin-top: var(--responsive-global-section-padding); }
+    &.margin-bottom { margin-bottom: var(--responsive-global-section-padding); }
+    &.margin-left { margin-left: var(--responsive-global-section-padding); }
+    &.margin-right { margin-right: var(--responsive-global-section-padding); }
+
+    .media-wrapper {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      overflow: hidden;
+
+      .overlay {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+
+        &.primary { background: var(--color-primary); }
+        &.secondary { background: var(--color-secondary); }
+        &.accent { background: var(--color-accent); }
+        &.global { background: var(--color-overlay-background); }
+      }
+
+      img, video { width: 100%; height: 100%; object-fit: cover; }
+    }
+
+    /* ------------------------------------------------------------ narrow */
+    // Below this the media column cannot hold a picture and a paragraph side
+    // by side without both being too narrow to read, so the step becomes one
+    // column and the media goes under its own text.
+    @container user-site (max-width: 768px) {
+      .step-body { flex-flow: column; }
+      .step-media { width: 100%; }
+    }
+  }
+}

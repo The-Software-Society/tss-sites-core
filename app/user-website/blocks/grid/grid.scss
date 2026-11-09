@@ -1,0 +1,483 @@
+/************************************************
+  Grid - Dual Version Support
+************************************************/
+@use '@/styles/variables' as *;
+
+#user-site {
+  .user-website-grid {
+    display: flex;
+    max-width: 100%;
+    position: relative;
+
+    // Content Position picker: horizontal (left/center/right) is applied
+    // to the section's flex axis AND echoed onto .content-above text and
+    // grid-item alignment so the title and items track the picker. The
+    // vertical axis (top/center/bottom) only shows when grid-wrapper has
+    // a defined min-height (e.g. Section Min Height set, or a Media
+    // Background layout that fills its section) — without slack to
+    // distribute, align-content has nothing to move.
+    &.position-top-left,
+    &.position-center-left,
+    &.position-bottom-left {
+      justify-content: flex-start;
+      .content-above { text-align: left; }
+      .grid-items { justify-items: start; }
+    }
+    &.position-top-center,
+    &.position-center-center,
+    &.position-bottom-center {
+      justify-content: center;
+      .content-above { text-align: center; }
+      .grid-items { justify-items: center; }
+    }
+    &.position-top-right,
+    &.position-center-right,
+    &.position-bottom-right {
+      justify-content: flex-end;
+      .content-above { text-align: right; }
+      .grid-items { justify-items: end; }
+    }
+    &.position-top-left,
+    &.position-top-center,
+    &.position-top-right {
+      .grid-wrapper { align-content: start; }
+    }
+    &.position-center-left,
+    &.position-center-center,
+    &.position-center-right {
+      .grid-wrapper { align-content: center; }
+    }
+    &.position-bottom-left,
+    &.position-bottom-center,
+    &.position-bottom-right {
+      .grid-wrapper { align-content: end; }
+    }
+
+    &.left-right-padding {
+      padding-left: var(--responsive-global-section-padding);
+      padding-right: var(--responsive-global-section-padding);
+    }
+    &.top-bottom-padding {
+      padding-top: var(--responsive-global-section-padding);
+      padding-bottom: var(--responsive-global-section-padding);
+    }
+    &.contain .grid-item-media-wrapper {
+      aspect-ratio: var(--grid-item-media-aspect-ratio, auto);
+
+      img, video, .svg-color-mask {
+        object-fit: cover;
+      }
+    }
+    &.margin-top { margin-top: var(--responsive-global-section-padding); }
+    &.margin-left { margin-left: var(--responsive-global-section-padding); }
+    &.margin-right { margin-right: var(--responsive-global-section-padding); }
+
+    .background-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      overflow: hidden;
+
+      .overlay {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+        &.primary { background: var(--color-primary); }
+        &.secondary { background: var(--color-secondary); }
+        &.accent { background: var(--color-accent); }
+        &.global { background: var(--color-overlay-background); }
+      }
+
+      img, video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        z-index: 0;
+      }
+    }
+
+    .grid-wrapper {
+      max-width: 100%;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: calc(var(--responsive-global-section-gap) / 1.5);
+      position: relative;
+      z-index: 1;
+
+      padding: 0 var(--responsive-global-section-padding);
+    }
+
+    .content-above {
+      display: flex;
+      flex-flow: column;
+      gap: var(--responsive-text-gap);
+
+      &.overlay-text {
+        h1, h2, h3, h4, h5, h6, p, ul, ol, li {
+          color: var(--color-white-text-for-overlay);
+        }
+      }
+
+      & + .grid-items,
+      & + .button-wrapper + .grid-items {
+        margin-top: var(--content-above-gap);
+      }
+    }
+
+    .grid-items ~ .button-wrapper:last-child {
+      margin-top: var(--grid-button-below-gap);
+    }
+
+    .grid-items {
+      display: grid;
+      row-gap: var(--grid-row-gap, calc(var(--responsive-global-section-gap) / 2.5));
+      column-gap: var(--grid-col-gap, calc(var(--responsive-global-section-gap) / 2.5));
+      width: 100%;
+
+      .grid-item {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-flow: column;
+        // Never wider than the track it sits in.
+        //
+        // The Content Position picker sets `justify-items` on .grid-items, and
+        // start/center/end all size an item to its own max-content instead of
+        // stretching it. A paragraph's max-content is the whole unwrapped line
+        // and a `contain` media wrapper takes its width from the media's aspect
+        // ratio, so either one can come out wider than the column - the item
+        // then bleeds sideways and its text is drawn over the neighbouring
+        // column. Clamping to the track fixes the overlap without changing
+        // where a correctly-sized item aligns.
+        max-width: 100%;
+        min-width: 0;
+        gap: var(--grid-item-internal-gap, calc(var(--responsive-text-gap) / 2));
+        border-radius: var(--responsive-global-border-radius);
+        overflow: hidden;
+
+        &:is(a) { cursor: pointer; text-decoration: none; }
+        &:is(div) { cursor: default; }
+
+        .content-wrapper {
+          display: flex;
+          flex-flow: column;
+          gap: var(--responsive-text-gap);
+        }
+
+        .grid-item-media-wrapper {
+          position: relative;
+          width: var(--grid-item-media-width, 100%);
+          max-width: 100%;
+          height: var(--grid-item-media-height, 200px);
+          border-radius: var(--responsive-global-border-radius);
+          overflow: hidden;
+
+          .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 1;
+            pointer-events: none;
+            &.primary { background: var(--color-primary); }
+            &.secondary { background: var(--color-secondary); }
+            &.accent { background: var(--color-accent); }
+            &.global { background: var(--color-overlay-background); }
+          }
+
+          img, video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            max-height: var(--grid-item-media-height, 200px);
+          }
+
+          .svg-color-mask {
+            width: 100% !important;
+            height: 100% !important;
+            max-height: var(--grid-item-media-height, 200px);
+            mask-size: contain !important;
+            -webkit-mask-size: contain !important;
+            mask-position: center !important;
+            -webkit-mask-position: center !important;
+          }
+        }
+
+        &.overlay-text {
+          h1, h2, h3, h4, h5, h6, p, ul, ol, li {
+            color: var(--color-white-text-for-overlay);
+          }
+        }
+
+        &.media-background {
+          position: relative;
+          min-height: var(--grid-item-height);
+          padding: var(--responsive-global-section-gap);
+
+          .content-wrapper {
+            position: relative;
+            z-index: 2;
+          }
+
+          .grid-item-media-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            border-radius: 0;
+
+            .overlay {
+              position: absolute;
+              height: 100%;
+              width: 100%;
+              z-index: 1;
+              &.primary { background: var(--color-primary); }
+              &.secondary { background: var(--color-secondary); }
+              &.accent { background: var(--color-accent); }
+              &.global { background: var(--color-overlay-background); }
+            }
+
+            img, video {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              max-width: unset;
+              max-height: unset;
+            }
+
+            .svg-color-mask {
+              width: 100% !important;
+              height: 100% !important;
+              max-width: unset;
+              max-height: unset;
+              mask-size: contain !important;
+              -webkit-mask-size: contain !important;
+              mask-position: center !important;
+              -webkit-mask-position: center !important;
+            }
+          }
+        }
+      }
+    }
+
+    .load-more-wrapper {
+      display: flex;
+      justify-content: center;
+      padding-top: range(15px, 25px);
+    }
+
+    // ========================================
+    // VERSION 1: CARD STYLES
+    // ========================================
+    &.grid-version-cards {
+      .grid-items {
+        .outer-wrapper {
+          display: flex;
+          flex-flow: column;
+          gap: var(--grid-item-internal-gap, calc(var(--responsive-text-gap) / 2));
+        }
+
+        .outer-wrapper:hover .card {
+          box-shadow: var(--card-shadow-x, 0px) var(--card-shadow-y, 0px) var(--card-shadow-blur, 20px) var(--card-shadow-spread, 0px) var(--card-hover-shadow-color, var(--card-shadow-color, rgba(var(--color-primary-rgb), .8)));
+          border-color: var(--card-hover-border-color, var(--card-border-color, transparent)) !important;
+        }
+
+        .card {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          flex-grow: 1;
+          gap: var(--responsive-text-gap);
+          padding: range(24px, 36px);
+          border: 2px solid var(--card-border-color, transparent);
+          border-radius: var(--responsive-global-border-radius);
+          box-shadow: var(--card-shadow-x, 0px) var(--card-shadow-y, 0px) var(--card-shadow-blur, 20px) var(--card-shadow-spread, 0px) var(--card-shadow-color, transparent);
+          transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+          overflow: hidden;
+
+          .circle-icon {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: range(48px, 184px);
+            height: range(48px, 184px);
+            border-radius: 6000px;
+            flex-shrink: 0;
+            filter: blur(110px);
+            pointer-events: none;
+            will-change: transform;
+          }
+
+          .content-wrapper {
+            flex: 1;
+
+            h1, h2, h3, h4, h5, h6, p, li, ul, ol, span:not([style*="color"]), strong, em {
+              color: var(--color-white-text-for-overlay);
+            }
+          }
+
+          &.standard-text .content-wrapper {
+            h1, h2, h3, h4, h5, h6 {
+              color: var(--color-title-text);
+            }
+            p, li, ul, ol, span, strong, em {
+              color: var(--color-body-text);
+            }
+          }
+
+          &.media-fill {
+            padding: 0;
+            gap: 0;
+
+            .grid-item-media-wrapper {
+              border-radius: 0;
+            }
+
+            .content-wrapper {
+              padding: range(24px, 36px);
+            }
+          }
+        }
+      }
+    }
+
+    // ========================================
+    // VERSION 2: PRICING STYLES
+    // ========================================
+    &.grid-version-pricing {
+      // Position picker sets justify-items on .grid-items, which would
+      // shrink pricing cards to content width. Pricing cards should
+      // always fill their column and match the tallest sibling.
+      .pricing-grid {
+        align-items: stretch;
+        justify-items: stretch;
+      }
+
+      // Full-width spotlight gradient background - horizontal bar
+      .spotlight-gradient {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100cqw;
+        height: 100%;
+        pointer-events: none;
+        z-index: 0;
+
+        background: linear-gradient(180deg,
+          transparent 0%,
+          var(--spotlight-color) 55.53%,
+          transparent 100%);
+
+        opacity: var(--spotlight-opacity, 0.5);
+      }
+
+      .pricing-card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        gap: range(16px, 24px);
+        padding: range(28px, 40px);
+        border-radius: var(--responsive-global-border-radius);
+        transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+        .card-heading {
+          h1, h2, h3, h4, h5, h6 {
+            margin: 0;
+            transition: color 0.3s ease-in-out;
+          }
+        }
+
+        .card-content {
+          flex: 1;
+
+          h1, h2, h3, h4, h5, h6, p, li, ul, ol, span, strong, em {
+            transition: color 0.3s ease-in-out;
+          }
+        }
+
+        .card-subtitle {
+          p {
+            margin: 0;
+            font-size: range(12px, 14px);
+            transition: color 0.3s ease-in-out;
+          }
+        }
+
+        // Normal state - contrast-evaluated text color
+        .card-heading *, .card-content *, .card-subtitle * {
+          color: var(--card-normal-text, inherit);
+        }
+
+        .button-wrapper {
+          display: flex;
+          flex-wrap: wrap;
+          gap: range(8px, 12px);
+          margin-top: auto;
+          padding-top: range(8px, 12px);
+        }
+
+        // Hover state - lift effect + contrast-evaluated text color
+        &.hovered {
+          transform: translateY(-4px);
+
+          .card-heading *, .card-content *, .card-subtitle * {
+            color: var(--card-hover-text, inherit) !important;
+          }
+
+          .card-content li::before {
+            background-color: var(--card-hover-text) !important;
+          }
+        }
+      }
+
+      // Custom list marker (active when a marker image is uploaded)
+      .pricing-grid.has-list-marker {
+        .pricing-card .card-content {
+          ul, ol {
+            list-style: none;
+            padding-inline-start: 0;
+            display: flex;
+            flex-direction: column;
+            gap: range(4px, 8px);
+
+            li {
+              display: flex;
+              align-items: flex-start;
+              gap: range(6px, 10px);
+
+              &::before {
+                content: '';
+                display: block;
+                flex-shrink: 0;
+                margin-top: 2px;
+                width: 12px;
+                height: 12px;
+                mask-image: var(--list-marker-url);
+                -webkit-mask-image: var(--list-marker-url);
+                mask-size: contain;
+                -webkit-mask-size: contain;
+                mask-repeat: no-repeat;
+                -webkit-mask-repeat: no-repeat;
+                mask-position: center;
+                -webkit-mask-position: center;
+                background-color: var(--card-normal-text);
+                transition: background-color 0.3s ease-in-out;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

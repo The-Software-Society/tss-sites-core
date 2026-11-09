@@ -1,0 +1,335 @@
+@use '@/styles/variables.scss' as *;
+/************************************************
+  FAQ
+************************************************/
+#user-site {
+  .faq {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    max-width: 100%;
+
+    .section-container {
+      display: flex;
+    }
+
+    .media-wrapper {
+      border-radius: 0 !important;
+    }
+
+    &.left-right-padding {
+      padding-left: var(--responsive-global-section-padding);
+      padding-right: var(--responsive-global-section-padding);
+    }
+    &.top-bottom-padding {
+      padding-top: var(--responsive-global-section-padding);
+      padding-bottom: var(--responsive-global-section-padding);
+    }
+    &.contain {
+      img, video { object-fit: contain; }
+    }
+    &.overlay-text {
+      h1, h2, h3, h4, h5, h6, p, li, span:not([style*="color"]), strong, em { color: var(--color-white-text-for-overlay); }
+      .faq-layout-default .faq-box { border-bottom-color: rgba(255, 255, 255, 0.2); }
+      .faq-layout-side-by-side .faq-side-right .faq-box { border-top-color: rgba(255, 255, 255, 0.2); }
+      .faq-layout-cards .faq-card.active h5 { color: var(--color-body-text); }
+      .faq-layout-numbered .faq-numbered-item { border-bottom-color: rgba(255, 255, 255, 0.2); }
+    }
+    &.enclosed {
+      border-radius: var(--responsive-global-border-radius);
+      margin: 0 auto;
+    }
+    &.margin-top { margin-top: var(--responsive-global-section-padding); }
+    &.margin-left { margin-left: var(--responsive-global-section-padding); }
+    &.margin-right { margin-right: var(--responsive-global-section-padding); }
+
+    .content-wrapper {
+      display: flex;
+      flex-flow: column;
+      gap: 15px;
+      width: 100%;
+      position: relative;
+      z-index: 1;
+
+      // Shared base styles
+      .faq-blocks {
+        width: 100%;
+
+        .openclose {
+          color: var(--faq-icon-color, var(--color-primary));
+        }
+
+        .faq-question-wrapper {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          cursor: pointer;
+          gap: range(10px, 15px);
+        }
+
+        .openclose {
+          flex-shrink: 0;
+          width: range(18px, 22px);
+          height: range(18px, 22px);
+          transition: color 0.3s ease;
+
+          svg {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .faq-content {
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.3s ease-in-out;
+        }
+
+        .active .faq-content {
+          max-height: 1000px;
+          overflow: auto;
+        }
+      }
+
+      // Default layout
+      // Refined accordion: full-width rows separated by a soft border,
+      // a circular icon that rotates on open, gentle hover bg, and the
+      // active question color shifts to the site's primary so it reads
+      // like a modern FAQ instead of a plain list.
+      .faq-layout-default {
+        display: flex;
+        flex-direction: column;
+
+        .faq-box {
+          position: relative;
+          padding: range(4px, 8px) range(2px, 6px);
+          border-bottom: 1px solid color-mix(in srgb, currentColor 14%, transparent);
+          transition: background-color 0.25s ease;
+
+          &:first-child {
+            border-top: 1px solid color-mix(in srgb, currentColor 14%, transparent);
+          }
+
+          &:hover {
+            background-color: color-mix(in srgb, currentColor 4%, transparent);
+          }
+
+          .faq-question-wrapper {
+            padding: range(14px, 22px) range(8px, 14px);
+
+            h5 {
+              transition: color 0.2s ease;
+              margin: 0;
+            }
+          }
+
+          .openclose {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: range(28px, 36px);
+            height: range(28px, 36px);
+            border-radius: 50%;
+            background: color-mix(in srgb, currentColor 8%, transparent);
+            // The glyph takes the question's own colour rather than a separate
+            // icon colour. Set independently, the two could resolve to the same
+            // value as the circle behind it and the closed control disappeared:
+            // a white plus on a pale disc, on a dark section.
+            color: currentColor;
+            border: 1px solid color-mix(in srgb, currentColor 28%, transparent);
+            transition: background-color 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
+
+            svg {
+              width: 60%;
+              height: 60%;
+            }
+          }
+
+          .faq-content {
+            padding: 0 range(8px, 14px);
+            // The answer needs air under the question it answers; opened, the
+            // two ran together as one block of text.
+            padding-top: 0;
+          }
+
+          &.active {
+            background-color: color-mix(in srgb, var(--color-primary, currentColor) 6%, transparent);
+
+            .faq-question-wrapper h5 {
+              color: var(--color-primary);
+            }
+
+            .openclose {
+              background: var(--color-primary);
+              color: var(--color-white-text-for-overlay);
+              border-color: var(--color-primary);
+            }
+
+            .faq-content {
+              padding-top: range(8px, 12px);
+              padding-bottom: range(18px, 26px);
+            }
+          }
+        }
+      }
+
+      // Cards layout
+      .faq-layout-cards {
+        display: flex;
+        flex-direction: column;
+        gap: range(12px, 16px);
+
+        .faq-card {
+          background: var(--color-body-background);
+          border-radius: var(--responsive-global-border-radius);
+          padding: range(20px, 30px);
+          box-shadow: 0 2px 8px rgba(21, 21, 21, 0.12);
+          transition: box-shadow 0.3s ease;
+          // An answer needs a clear gap from the question it answers, and each
+          // card needs room from the next. Opened, the two ran together as one
+          // paragraph with a bold first line.
+          display: flex;
+          flex-direction: column;
+          gap: range(10px, 14px);
+
+          .faq-icon-circle {
+            width: range(32px, 40px);
+            height: range(32px, 40px);
+            border-radius: 50%;
+            // Derived from the text colour, not a fixed light grey.
+            //
+            // A #EAEAEA disc with body-text-coloured glyph works on a light
+            // theme and disappears on a dark one, where the text is near-white:
+            // a white plus on a near-white circle. Tinting the disc from
+            // currentColor keeps the same visual weight whichever way round the
+            // theme is, and the glyph inherits the colour the question is
+            // already legible in.
+            background: color-mix(in srgb, currentColor 12%, transparent);
+            border: 1px solid color-mix(in srgb, currentColor 26%, transparent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+            color: inherit;
+
+            svg {
+              width: range(14px, 18px);
+              height: range(14px, 18px);
+            }
+          }
+
+          &.active {
+            h5 { color: var(--color-primary); }
+
+            .faq-icon-circle {
+              background-color: var(--color-primary);
+              border-color: var(--color-primary);
+              color: var(--color-white-text-for-overlay);
+            }
+          }
+        }
+      }
+
+      // Side by Side layout
+      .faq-layout-side-by-side {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        gap: range(30px, 60px);
+
+        .faq-side-right .faq-box {
+          border-top: 2px solid var(--color-body-text);
+
+          .faq-question-wrapper {
+            padding: range(14px, 20px) 0;
+          }
+
+          &.active .faq-content {
+            padding-bottom: range(14px, 20px);
+          }
+        }
+
+        &.styled-items .faq-side-right .faq-box {
+          border-top: none;
+          border-radius: var(--responsive-global-border-radius);
+          padding: range(14px, 20px);
+          margin-bottom: range(10px, 14px);
+
+          &.active .faq-content {
+            padding-bottom: 0;
+          }
+        }
+
+        @include site-breakpoint(md) {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      // Numbered layout
+      .faq-layout-numbered {
+        .faq-numbered-item {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: auto auto;
+          gap: 0 range(20px, 40px);
+          padding: range(20px, 30px) 0;
+          border-bottom: 1px solid var(--border-color);
+
+          .faq-number {
+            grid-row: 1;
+            grid-column: 1;
+            font-size: range(24px, 36px);
+            font-weight: 700;
+            color: var(--faq-icon-color, var(--color-primary));
+            opacity: 0.5;
+          }
+
+          .faq-numbered-spacer {
+            grid-row: 1;
+            grid-column: 2;
+          }
+
+          .faq-numbered-question {
+            grid-row: 2;
+            grid-column: 1;
+          }
+
+          .faq-numbered-answer {
+            grid-row: 2;
+            grid-column: 2;
+          }
+
+          @include site-breakpoint(md) {
+            grid-template-columns: 1fr;
+
+            .faq-number {
+              grid-column: 1;
+              grid-row: 1;
+            }
+
+            .faq-numbered-spacer {
+              display: none;
+            }
+
+            .faq-numbered-question {
+              grid-column: 1;
+              grid-row: 2;
+            }
+
+            .faq-numbered-answer {
+              grid-column: 1;
+              grid-row: 3;
+            }
+          }
+        }
+      }
+    }
+
+    &:not(.left-right-padding) .content-wrapper {
+      @include site-breakpoint(md) {
+        padding-left: var(--responsive-global-section-padding);
+        padding-right: var(--responsive-global-section-padding);
+      }
+    }
+  }
+}

@@ -1,0 +1,268 @@
+@use '@/styles/variables.scss' as *;
+
+/************************************************
+  Large Media
+************************************************/
+#user-site {
+  .large-media {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    max-width: 100%;
+
+    // Position classes inherited from single-column pattern
+    &.position-top-left {
+      justify-content: flex-start;
+
+      .content-wrapper {
+        justify-content: flex-start;
+      }
+    }
+
+    &.position-top-center {
+      justify-content: center;
+
+      .content-wrapper {
+        justify-content: flex-start;
+      }
+    }
+
+    &.position-top-right {
+      justify-content: flex-end;
+
+      .content-wrapper {
+        justify-content: flex-start;
+      }
+    }
+
+    &.position-center-left {
+      justify-content: flex-start;
+
+      .content-wrapper {
+        justify-content: center;
+      }
+    }
+
+    &.position-center-center {
+      justify-content: center;
+
+      .content-wrapper {
+        justify-content: center;
+      }
+    }
+
+    &.position-center-right {
+      justify-content: flex-end;
+
+      .content-wrapper {
+        justify-content: center;
+      }
+    }
+
+    &.position-bottom-left {
+      justify-content: flex-start;
+
+      .content-wrapper {
+        justify-content: flex-end;
+      }
+    }
+
+    &.position-bottom-center {
+      justify-content: center;
+
+      .content-wrapper {
+        justify-content: flex-end;
+      }
+    }
+
+    &.position-bottom-right {
+      justify-content: flex-end;
+
+      .content-wrapper {
+        justify-content: flex-end;
+      }
+    }
+
+    .grid-wrapper {
+      position: relative;
+      display: grid;
+      grid-template-rows: auto 1fr;
+      width: 100%;
+      gap: 30px;
+
+      .content-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        padding: var(--responsive-global-section-padding);
+        position: relative;
+        z-index: 1;
+        align-items: center;
+
+        .button-wrapper {
+          display: flex;
+          gap: 10px;
+          flex-wrap: wrap;
+        }
+      }
+
+      .media-wrapper {
+        position: relative;
+        width: 100%;
+        // A default box for the `cover` case, overridden by the media's own
+        // ratio under `.contain` above.
+        height: 500px;
+        overflow: hidden;
+        z-index: 0;
+
+        .overlay {
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          z-index: 1;
+          top: 0;
+          left: 0;
+
+          &.primary {
+            background: var(--color-primary);
+          }
+
+          &.secondary {
+            background: var(--color-secondary);
+          }
+
+          &.accent {
+            background: var(--color-accent);
+          }
+
+          &.global {
+            background: var(--color-overlay-background);
+          }
+        }
+
+        img,
+        video {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    // A contained block's content column is exactly as wide as its media, so
+    // the wrapper's own inset is the only thing standing between a caption and
+    // the edge of the picture it describes. Kept for the full-width case,
+    // where the text sits over the media and needs the breathing room.
+    &.contained {
+      .grid-wrapper .content-wrapper {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+
+    // Utility classes
+    &.full-width {
+      .grid-wrapper {
+        max-width: 100%;
+      }
+
+      .media-wrapper {
+        border-radius: 0;
+      }
+    }
+
+    &.enclosed {
+      border-radius: var(--responsive-global-border-radius);
+
+      .media-wrapper {
+        border-radius: var(--responsive-global-border-radius);
+      }
+    }
+
+    // The wrapper takes the media's own aspect ratio, so the box is exactly
+    // the shape of the picture and `cover` fills it with nothing cropped and
+    // no dead space inside the element. See LargeMedia.tsx for why this is
+    // done here rather than with `object-fit: contain`.
+    //
+    // Falls back to the fixed height when the ratio is unknown, so a block
+    // whose media has no recorded dimensions still reserves sensible space
+    // instead of collapsing.
+    &.contain {
+      .media-wrapper {
+        // `height` has to give way or it wins over the ratio and the box stays
+        // 500px tall regardless of the shape of the picture.
+        height: auto;
+        aspect-ratio: var(--media-aspect-ratio, 16 / 9);
+      }
+    }
+
+    &.overlay-text {
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p {
+        color: var(--color-white-text-for-overlay);
+      }
+    }
+
+    &.primary {
+      background: var(--color-primary);
+    }
+
+    &.secondary {
+      background: var(--color-secondary);
+    }
+
+    &.accent {
+      background: var(--color-accent);
+    }
+
+    &.left-right-padding {
+      padding-left: var(--responsive-global-section-padding);
+      padding-right: var(--responsive-global-section-padding);
+    }
+
+    &.top-bottom-padding {
+      padding-top: var(--responsive-global-section-padding);
+      padding-bottom: var(--responsive-global-section-padding);
+
+      &.contained {
+        .media-wrapper {
+          border-radius: var(--responsive-global-border-radius);
+        }
+      }
+    }
+
+    &.margin-top {
+      margin-top: var(--responsive-global-section-padding);
+    }
+    &.margin-left {
+      margin-left: var(--responsive-global-section-padding);
+    }
+    &.margin-right {
+      margin-right: var(--responsive-global-section-padding);
+    }
+
+    // Responsive adjustments
+    @container user-site (max-width: 768px) {
+      .grid-wrapper {
+        .media-wrapper {
+          height: 300px; // Shorter height on mobile
+        }
+
+        .content-wrapper {
+          text-align: center;
+
+          .button-wrapper {
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+}
